@@ -26,3 +26,26 @@ img {
   text-align: center;
   margin-top: 30px;
 }
+
+
+
+
+
+
+
+// Product Page
+.main-ul {
+    padding-left: 19px;
+}
+.sub-ul {
+  counter-reset: itemqqq;
+  list-style: none;
+  padding-left: 13px;
+  li::before {
+    content: counter(itemqqq) ". ";
+    counter-increment: itemqqq;
+  }
+}
+h3.title.advantages {
+    margin: 30px 0 0 0;
+}

@@ -1,3 +1,7 @@
+.block {
+  display: block;
+  margin: 20px 0;
+}
 .section2 {
   .wrap-btn {
     text-align: center;
@@ -25,14 +29,19 @@
     display: flex;
     align-items: center;
   }
+
+  .description,
+  .card-description,
+  .card .footer .stats {
+    margin: 40px 0px;
+  }
 }
 
 @media (max-width: 991.98px) {
-.info:first-of-type {
+  .info:first-of-type {
     padding-top: 100px !important;
+  }
 }
-}
-
 
 @media (max-width: 992px) {
   // Section2
