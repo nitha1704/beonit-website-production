@@ -1,0 +1,94 @@
+<nav class="navbar navbar-expand-lg fixed-top navbar-transparent" color-on-scroll="300" id="navbar-top">
+  <div class="container">
+    <div class="navbar-item1">
+      <a class="wrap-logo" [routerLink]="['home']">
+        <img src="../../../assets/img/logo/beonit-logo.png" />
+      </a>
+    </div>
+    <div class="navbar-item2">
+      <button aria-controls="navigation-index" aria-label="Toggle navigation" class="navbar-toggler"
+        [attr.aria-expanded]="!isCollapsed" (click)="isCollapsed = !isCollapsed" id="navigation" type="button">
+        <span class="navbar-toggler-bar bar1"> </span>
+        <span class="navbar-toggler-bar bar2"> </span>
+        <span class="navbar-toggler-bar bar3"> </span>
+      </button>
+      <div class="navbar-collapse" [collapse]="isCollapsed" id="navigation">
+        <div class="navbar-collapse-header">
+          <div class="row">
+            <div class="col-6 collapse-brand">
+              <a>Be on It</a>
+            </div>
+            <div class="col-6 collapse-close text-right">
+              <button aria-controls="navigation-index" aria-label="Toggle navigation" class="navbar-toggler"
+                [attr.aria-expanded]="!isCollapsed" (click)="isCollapsed = !isCollapsed" id="navigation" type="button">
+                <i class="tim-icons icon-simple-remove"> </i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <ul class="navbar-nav ml-auto">
+
+          <!-- Item 1 -->
+          <li class="nav-item dropdown" dropdown>
+            <a class="nav-link dropdown-toggle dropdown-toggle" data-toggle="dropdown" dropdownToggle
+              id="navbarDropdownMenuLink">
+              <i aria-hidden="true" class="tim-icons icon-components"> </i>
+              <p>Company</p>
+            </a>
+            <div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu dropdown-menu-right" *dropdownMenu>
+              <a class="dropdown-item" [routerLink]="['about-us']">
+                <i class="tim-icons icon-app"> </i> About Us
+              </a>
+              <a class="dropdown-item" [routerLink]="['team']">
+                <i class="tim-icons icon-single-02"> </i> Team
+              </a>
+              <a class="dropdown-item" [routerLink]="['contact-us']">
+                <i class="tim-icons icon-email-85"> </i> Contact Us
+              </a>
+            </div>
+          </li>
+
+          <!-- Item 2 -->
+          <li class="nav-item dropdown" dropdown>
+            <a class="nav-link dropdown-toggle dropdown-toggle" data-toggle="dropdown" dropdownToggle
+              id="navbarDropdownMenuLink">
+              <i aria-hidden="true" class="tim-icons icon-app"> </i>
+              <p>Product</p>
+            </a>
+            <div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu dropdown-menu-right" *dropdownMenu>
+              <a class="dropdown-item" [routerLink]="['keyboard']">
+                <i class="tim-icons icon-app"> </i> Be On Keyboard
+              </a>
+              <a class="dropdown-item" [routerLink]="['pulse-oximeter']">
+                <i class="tim-icons icon-settings"> </i> Pulse Oximeter
+              </a>
+              <a class="dropdown-item" [routerLink]="['water-quality-monitoring']">
+                <i class="tim-icons icon-align-left-2"> </i> Water Quality Monitoring
+              </a>
+              <a class="dropdown-item" [routerLink]="['erp']">
+                <i class="tim-icons icon-align-left-2"> </i> ERP
+              </a>
+            </div>
+          </li>
+
+          <!-- Item 3 -->
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['achievement']">
+              <i aria-hidden="true" class="tim-icons icon-vector"> </i>
+              <p>Achievement</p>
+            </a>
+          </li>
+
+          <!-- Item 4 -->
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['offer']">
+              <i aria-hidden="true" class="tim-icons icon-globe-2"> </i>
+              <p>Offer</p>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,48 @@
+.navbar {
+  p {
+    color: white;
+  }
+}
+
+.collapse-brand a {
+  color: #29BA98;
+}
+
+.navbar.bg-danger {
+  background-color: #ee2d7b !important;
+}
+.wrap-logo {
+  display: block;
+  height: 50px;
+  width: 50px;
+}
+
+.nav-link {
+  cursor: pointer;
+}
+.dropdown-item {
+  transition: 0.2s ease;
+}
+.dropdown-menu .dropdown-item {
+  color: black;
+}
+.dropdown-menu .dropdown-item:hover,
+.dropdown-menu .dropdown-item:focus,
+.bootstrap-select .dropdown-menu.inner li a:hover,
+.bootstrap-select .dropdown-menu.inner li a:focus {
+  background-color: black;
+  color: white;
+}
+
+@media (max-width: 991px) {
+  .dropdown-menu .dropdown-item {
+    color: white;
+  }
+
+  .navbar-collapse {
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    border-radius: 0;
+  }
+}

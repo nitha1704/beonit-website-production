@@ -1,0 +1,21 @@
+.wrap-offer {
+  padding-top: 30vh;
+  .offer {
+    margin-bottom: 60px;
+  }
+}
+.wrap-title {
+  margin-bottom: 60px;
+  h1 {
+    font-size: 50px;
+    color: white;
+    text-align: center;
+  }
+}
+.offer:nth-child(even) {
+  .container-offer {
+    .row {
+      flex-direction: row-reverse;
+    }
+  }
+}
