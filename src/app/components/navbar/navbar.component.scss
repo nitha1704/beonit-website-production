@@ -5,11 +5,62 @@
 }
 
 .collapse-brand a {
-  color: #29BA98;
+  color: #29ba98;
 }
 
 .navbar.bg-danger {
   background-color: #ee2d7b !important;
+}
+.navbar .navbar-nav .nav-item .nav-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar .dropdown-toggle:after {
+  margin-top: 10px;
+  height: 0;
+  position: relative;
+  top: -3px;
+}
+.nav-item.language {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .wrap-flag {
+    display: flex;
+    align-items: center;
+    div {
+      margin: 0 5px;
+      cursor: pointer;
+    }
+    .flag {
+      width: 20px;
+      height: 15px;
+    }
+    .abbreviation {
+      font-size: 11.5px;
+    }
+    .en {
+      display: flex;
+      align-items: center;
+      .flag {
+        background: url("../../../assets/img/flag-icons/us.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+    .th {
+      display: flex;
+      align-items: center;
+      .flag {
+        background: url("../../../assets/img/flag-icons/th.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+  }
 }
 .wrap-logo {
   display: block;
@@ -35,6 +86,9 @@
 }
 
 @media (max-width: 991px) {
+  .navbar .navbar-nav .nav-item .nav-link {
+    display: inline-flex;
+  }
   .dropdown-menu .dropdown-item {
     color: white;
   }

@@ -33,17 +33,17 @@
             <a class="nav-link dropdown-toggle dropdown-toggle" data-toggle="dropdown" dropdownToggle
               id="navbarDropdownMenuLink">
               <i aria-hidden="true" class="tim-icons icon-components"> </i>
-              <p>Company</p>
+              <p>{{'navbar.navigatorMenu.item1' | translate}}</p>
             </a>
             <div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu dropdown-menu-right" *dropdownMenu>
               <a class="dropdown-item" [routerLink]="['about-us']">
-                <i class="tim-icons icon-app"> </i> About Us
+                <i class="tim-icons icon-app"> </i> {{'navbar.navigatorMenu.sub-item1.1' | translate}}
               </a>
               <a class="dropdown-item" [routerLink]="['team']">
-                <i class="tim-icons icon-single-02"> </i> Team
+                <i class="tim-icons icon-single-02"> </i> {{'navbar.navigatorMenu.sub-item1.2' | translate}}
               </a>
               <a class="dropdown-item" [routerLink]="['contact-us']">
-                <i class="tim-icons icon-email-85"> </i> Contact Us
+                <i class="tim-icons icon-email-85"> </i> {{'navbar.navigatorMenu.sub-item1.3' | translate}}
               </a>
             </div>
           </li>
@@ -53,26 +53,26 @@
             <a class="nav-link dropdown-toggle dropdown-toggle" data-toggle="dropdown" dropdownToggle
               id="navbarDropdownMenuLink">
               <i aria-hidden="true" class="tim-icons icon-app"> </i>
-              <p>Product</p>
+              <p>{{'navbar.navigatorMenu.item2' | translate}}</p>
             </a>
             <div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu dropdown-menu-right" *dropdownMenu>
               <a class="dropdown-item" [routerLink]="['keyboard']">
-                <i class="tim-icons icon-app"> </i> Be On Keyboard
+                <i class="tim-icons icon-app"> </i> {{'navbar.navigatorMenu.sub-item2.1' | translate}}
               </a>
               <a class="dropdown-item" [routerLink]="['pulse-oximeter']">
-                <i class="tim-icons icon-settings"> </i> Pulse Oximeter
+                <i class="tim-icons icon-settings"> </i> {{'navbar.navigatorMenu.sub-item2.2' | translate}}
               </a>
               <a class="dropdown-item" [routerLink]="['water-quality-monitoring']">
-                <i class="tim-icons icon-align-left-2"> </i> Water Quality Monitoring
+                <i class="tim-icons icon-align-left-2"> </i> {{'navbar.navigatorMenu.sub-item2.3' | translate}}
               </a>
               <a class="dropdown-item" [routerLink]="['iot']">
-                <i class="tim-icons icon-align-left-2"> </i> IoT
+                <i class="tim-icons icon-align-left-2"> </i> {{'navbar.navigatorMenu.sub-item2.4' | translate}}
               </a>
               <a class="dropdown-item" [routerLink]="['erp']">
-                <i class="tim-icons icon-align-left-2"> </i> ERP
+                <i class="tim-icons icon-align-left-2"> </i> {{'navbar.navigatorMenu.sub-item2.5' | translate}}
               </a>
               <a class="dropdown-item" [routerLink]="['research']">
-                <i class="tim-icons icon-align-left-2"> </i> Research
+                <i class="tim-icons icon-align-left-2"> </i> {{'navbar.navigatorMenu.sub-item2.6' | translate}}
               </a>
             </div>
           </li>
@@ -81,7 +81,7 @@
           <li class="nav-item">
             <a class="nav-link" [routerLink]="['achievement']">
               <i aria-hidden="true" class="tim-icons icon-vector"> </i>
-              <p>Achievement</p>
+              <p>{{'navbar.navigatorMenu.item3' | translate}}</p>
             </a>
           </li>
 
@@ -89,8 +89,23 @@
           <li class="nav-item">
             <a class="nav-link" [routerLink]="['offer']">
               <i aria-hidden="true" class="tim-icons icon-globe-2"> </i>
-              <p>Offer</p>
+              <p>{{'navbar.navigatorMenu.item4' | translate}}</p>
             </a>
+          </li>
+
+          <!-- Item 5 -->
+          <li class="nav-item language">
+            <div class="wrap-flag">
+              <div class="th" (click)="changeLanguage('th')">
+                <div class="flag"></div>
+                <span class="abbreviation">TH</span>
+              </div>
+              <!-- <span>|</span> -->
+              <div class="en" (click)="changeLanguage('en')">
+                <div class="flag"></div>
+                <span class="abbreviation">US</span>
+              </div>
+            </div>
           </li>
 
         </ul>

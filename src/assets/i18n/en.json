@@ -1,0 +1,28 @@
+{
+  "navbar": {
+    "navigatorMenu": {
+      "item1": "Company",
+      "item2": "Product",
+      "item3": "Achievement",
+      "item4": "Offer",
+      "sub-item1": {
+        "1": "About Us",
+        "2": "Team",
+        "3": "Contact Us"
+      },
+      "sub-item2": {
+        "1": "Be On Keyboard",
+        "2": "Pulse Oximeter",
+        "3": "Water Quality Monitoring",
+        "4": "IoT",
+        "5": "ERP",
+        "6": "Research"
+      }
+    }
+  },
+  "home": {
+    "section1": {
+        "title": "Be on It"
+    }
+  }
+}

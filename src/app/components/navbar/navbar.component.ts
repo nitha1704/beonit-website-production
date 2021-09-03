@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Router, NavigationEnd } from "@angular/router";
+import { TranslateService } from "@ngx-translate/core";
 
 @Component({
   selector: "app-navbar",
@@ -9,7 +10,7 @@ import { Router, NavigationEnd } from "@angular/router";
 export class NavbarComponent implements OnInit {
   isCollapsed = true;
   autoclose = false;
-  constructor(private router: Router) {
+  constructor(private router: Router, private translate: TranslateService) {
     router.events.subscribe(val => {
       this.autoclose = true;
       this.isCollapsed = true;
@@ -17,4 +18,8 @@ export class NavbarComponent implements OnInit {
   }
 
   ngOnInit() {}
+
+  changeLanguage(language: any) {
+    this.translate.use(language);
+  }
 }

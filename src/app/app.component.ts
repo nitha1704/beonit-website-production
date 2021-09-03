@@ -8,6 +8,8 @@ import {
 import { Location } from "@angular/common";
 import { DOCUMENT } from "@angular/common";
 
+import { TranslateService } from "@ngx-translate/core";
+
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
@@ -17,11 +19,13 @@ export class AppComponent implements OnInit {
   constructor(
     private renderer: Renderer2,
     public location: Location,
-    @Inject(DOCUMENT) document
-  ) {}
+    @Inject(DOCUMENT) document,
+    private translate: TranslateService
+  ) {
+    translate.setDefaultLang("en");
+  }
 
   @HostListener("window:scroll", ["$event"])
-  
   ngOnInit() {
     this.onWindowScroll();
   }

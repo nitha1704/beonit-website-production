@@ -8,9 +8,19 @@ import { CommonModule } from "@angular/common";
 
 import { BsDropdownModule } from "ngx-bootstrap/dropdown";
 import { CollapseModule } from "ngx-bootstrap/collapse";
+
+// Owl Carousel
 import { CarouselModule } from "ngx-owl-carousel-o";
+
+// Ngx Translate
+import { HttpClientModule, HttpClient } from "@angular/common/http";
+import { TranslateModule, TranslateLoader } from "@ngx-translate/core";
+import { TranslateHttpLoader } from "@ngx-translate/http-loader";
+
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
+
+
 
 // My Component
 import { NavbarComponent } from "./components/navbar/navbar.component";
@@ -32,7 +42,9 @@ import { PulseOximeterComponent } from './pages/products/pulse-oximeter/pulse-ox
 import { WaterQualityMonitoringComponent } from './pages/products/water-quality-monitoring/water-quality-monitoring.component';
 
 
-
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 
 @NgModule({
   declarations: [
@@ -63,6 +75,14 @@ import { WaterQualityMonitoringComponent } from './pages/products/water-quality-
     CollapseModule.forRoot(),
     TagInputModule,
     CarouselModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient],
+      },
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent],
