@@ -1,7 +1,13 @@
 img {
     object-fit: cover;
 }
-
+.block {
+  display: block;
+  margin: 20px 0;
+}
+.bold {
+  font-weight: bold;
+}
 .wrap-contact-modal {
   position: fixed;
   top: 0;

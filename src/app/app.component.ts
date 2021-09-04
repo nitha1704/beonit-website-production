@@ -22,12 +22,13 @@ export class AppComponent implements OnInit {
     @Inject(DOCUMENT) document,
     private translate: TranslateService
   ) {
-    translate.setDefaultLang("en");
+    
   }
 
   @HostListener("window:scroll", ["$event"])
   ngOnInit() {
     this.onWindowScroll();
+    this.checkLanguage();
   }
 
   onWindowScroll() {
@@ -44,5 +45,11 @@ export class AppComponent implements OnInit {
         element.classList.remove("bg-danger");
       }
     }
+  }
+
+  checkLanguage() {
+    // const checkLang = localStorage.getItem('lang') || 'en';
+    // this.translate.setDefaultLang(checkLang);
+    this.translate.setDefaultLang('en');
   }
 }
