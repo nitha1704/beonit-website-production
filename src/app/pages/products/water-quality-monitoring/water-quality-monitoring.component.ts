@@ -11,8 +11,4 @@ export class WaterQualityMonitoringComponent implements OnInit {
   ngOnInit(): void {
     
   }
-
-  openModal(wrapContactModal) {
-    wrapContactModal.classList.add("active");
-  }
 }

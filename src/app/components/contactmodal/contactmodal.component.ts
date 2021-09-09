@@ -1,18 +1,19 @@
 import { Component, OnInit } from "@angular/core";
-
+import { GlobalService } from "src/app/service/global.service";
 @Component({
   selector: "app-contactmodal",
   templateUrl: "./contactmodal.component.html",
   styleUrls: ["./contactmodal.component.scss"],
 })
 export class ContactmodalComponent implements OnInit {
-  constructor() {}
+  isDisplay: any = false;
 
-  ngOnInit(): void {}
+  constructor(private globalService: GlobalService) {}
 
-  closeModal() {
-    const wrapContactModal = document.querySelector(".wrap-contact-modal");
-    wrapContactModal.classList.remove("active");
+  ngOnInit(): void {
+    this.globalService
+      .getIsModalBoxShow()
+      .subscribe((value) => (this.isDisplay = value));
   }
 
   addFocus(e: any) {
@@ -27,5 +28,9 @@ export class ContactmodalComponent implements OnInit {
   }
   removeFocusTextArea(e: any) {
     e.target.classList.remove("active");
+  }
+
+  closeModal(): void{
+    this.globalService.isModalBoxShow.next(false);
   }
 }

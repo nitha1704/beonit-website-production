@@ -102,8 +102,7 @@
           </a>
         </div>
         <div class="col-md-12 wrap-btn">
-          <button type="submit" class="btn btn-info" (click)="openModal(wrapContactModal)" #getInTouchBtn>Get in
-            touch</button>
+            <app-get-in-touchbtn></app-get-in-touchbtn>
         </div>
       </div>
     </div>
@@ -191,6 +190,4 @@
 </div>
 
 <!-- Contact Modal -->
-<div class="wrap-contact-modal" #wrapContactModal>
-  <app-contactmodal></app-contactmodal>
-</div>
+<app-contactmodal></app-contactmodal>

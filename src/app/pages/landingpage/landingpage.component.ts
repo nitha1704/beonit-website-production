@@ -12,10 +12,6 @@ export class LandingpageComponent implements OnInit, OnDestroy {
   ngOnInit() {}
   ngOnDestroy() {}
 
-  openModal(wrapContactModal) {
-    wrapContactModal.classList.add("active");
-  }
-
   customOptions: OwlOptions = {
     loop: true,
     mouseDrag: false,

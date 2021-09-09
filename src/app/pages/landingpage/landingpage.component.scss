@@ -1,8 +1,11 @@
-
 .section2 {
   .wrap-btn {
-    text-align: center;
+    margin-top: -30px;
+    .wrap-open-modal-btn {
+      margin-top: 0px;
+    }
   }
+
   a.info {
     display: block;
     transition: 0.3s ease;

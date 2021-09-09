@@ -66,16 +66,12 @@
                     </div>
                 </div>
                 <div class="col-md-12 wrap-open-modal-btn">
-                    <button type="submit" class="btn btn-info open-modal-btn" (click)="openModal(wrapContactModal)"
-                        #getInTouchBtn>Get
-                        in
-                        touch</button>
+                    <app-get-in-touchbtn></app-get-in-touchbtn>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<div class="wrap-contact-modal" #wrapContactModal>
-    <app-contactmodal></app-contactmodal>
-</div>
+<!-- Contact Modal -->
+<app-contactmodal></app-contactmodal>

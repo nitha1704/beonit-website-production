@@ -9,8 +9,4 @@ export class PulseOximeterComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
-
-  openModal(wrapContactModal) {
-    wrapContactModal.classList.add("active");
-  }
 }

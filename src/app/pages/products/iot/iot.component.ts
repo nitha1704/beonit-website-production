@@ -10,7 +10,5 @@ export class IotComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  openModal(wrapContactModal) {
-    wrapContactModal.classList.add("active");
-  }
+
 }

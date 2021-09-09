@@ -40,6 +40,7 @@ import { ResearchComponent } from './pages/products/research/research.component'
 import { KeyboardComponent } from './pages/products/keyboard/keyboard.component';
 import { PulseOximeterComponent } from './pages/products/pulse-oximeter/pulse-oximeter.component';
 import { WaterQualityMonitoringComponent } from './pages/products/water-quality-monitoring/water-quality-monitoring.component';
+import { GetInTouchbtnComponent } from './components/get-in-touchbtn/get-in-touchbtn.component';
 
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -64,6 +65,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     KeyboardComponent,
     PulseOximeterComponent,
     WaterQualityMonitoringComponent,
+    GetInTouchbtnComponent,
   ],
   imports: [
     CommonModule,
