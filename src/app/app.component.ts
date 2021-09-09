@@ -32,18 +32,24 @@ export class AppComponent implements OnInit {
   }
 
   onWindowScroll() {
+    var element = document.getElementById("navbar-top");
+    var navbarCollapse = document.querySelector(".navbar-collapse-header");
     if (window.pageYOffset > 100) {
-      var element = document.getElementById("navbar-top");
       if (element) {
         element.classList.remove("navbar-transparent");
         element.classList.add("bg-danger");
       }
     } else {
-      var element = document.getElementById("navbar-top");
       if (element) {
         element.classList.add("navbar-transparent");
         element.classList.remove("bg-danger");
       }
+    }
+
+    if(element.classList.contains('bg-danger')){
+      navbarCollapse.classList.add('active');
+    } else {
+      navbarCollapse.classList.remove("active");
     }
   }
 

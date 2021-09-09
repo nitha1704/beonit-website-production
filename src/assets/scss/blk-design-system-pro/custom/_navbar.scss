@@ -206,6 +206,8 @@
         display: block;
         padding-bottom: 1rem;
         padding-top: 0.7rem;
+        transition: 0.3s ease;
+
         .collapse-brand {
           font-size: $font-size-xl;
           color: $white;
@@ -228,7 +230,9 @@
         padding: 0px;
       }
     }
-
+    .navbar-collapse-header.active {
+      padding-top: 0rem;
+    }
     .navbar-nav {
       .btn {
         margin-left: -3px;
